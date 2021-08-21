@@ -1,6 +1,26 @@
+||classes|| :- 
+1.Are user defined data type,
+2.Blueprint from which objects are created
+3.It has -attributes,functions(methods).
+
+
+||objects|| :-
+
+1.Created from class
+2.each object can be unique
+3.each can use the same methods defined in a class.
+
+
+
+
+
+
+
+
+
 #include<iostream>
 using namespace std;
-class Phone{
+class Phone{        //it is an standard to keep first character of class name capital
 private:  //class is private by default
 
 
