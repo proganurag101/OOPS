@@ -13,8 +13,8 @@
 
 #include<iostream>
 using namespace std;
-class Phone{        //it is an standard to keep first character of class name capital
-private:  //class is private by default
+class Phone{                      //it is an standard to keep first character of class name capital
+private:                          //class is private by default
 
 
     //attributes                  //private attributes inside class are accessible here(in class) only
@@ -22,7 +22,7 @@ private:  //class is private by default
 	string p_size;    
 public:
 
-	//constructors-used for object initialization,same name as that of class,no return type.
+	                         //constructors-used for object initialization,same name as that of class,no return type.
 	Phone(string name,string size){
 		p_name = name;
 		p_size = size;
@@ -32,7 +32,7 @@ public:
 
 
 
-    //functions            //these functions are accessible outside public
+    //functions                  //these functions are accessible outside public
 	void makecall(){        //can be called from main function
 		cout<<"Making call using "<<p_name<<endl;
 	}
