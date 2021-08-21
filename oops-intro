@@ -11,20 +11,13 @@
 3.each can use the same methods defined in a class.
 
 
-
-
-
-
-
-
-
 #include<iostream>
 using namespace std;
 class Phone{        //it is an standard to keep first character of class name capital
 private:  //class is private by default
 
 
-    //attributes                  //attributes inside class are accessible here only
+    //attributes                  //private attributes inside class are accessible here(in class) only
 	string p_name;
 	string p_size;    
 public:
