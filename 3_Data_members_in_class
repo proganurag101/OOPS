@@ -1,0 +1,81 @@
+Data members of classes in c++:
+1.They are attribute of classes,
+2.They hold data of objects.
+3.Data members hold values for every object seperately,
+4.We keep data members private mostly(encapsulation),so to access them we then use setter and getter function.
+
+Types:
+String,char,int,double.
+array types :- bit fields,and user-defined type such as class type.
+
+
+
+#include<iostream>
+using namespace std;
+
+class Point{
+public:
+	int x,y;   //these data members will hold values for every object seperately.
+	Point(){}
+	Point(int a,int b){
+		x=a;
+		y=b;
+	}
+
+};
+
+
+	
+
+int main(){
+	Point p1(1,1),p2(1,2);
+	cout<<p1.x<<" "<<p1.y<<endl; //P1 has its own x and y values
+
+	cout<<p2.x<<" "<<p2.y<<endl; //p2 has its own x and y values
+
+
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+class Point{
+public:
+	int x,y;   //these data members will hold values for every object seperately.
+	Point(){}
+	Point(int a,int b){
+		x=a;
+		y=b;
+	}
+
+};
+
+
+	
+
+int main(){
+	Point p1(1,1),p2(1,2);
+	cout<<p1.x<<" "<<p1.y<<endl; //P1 has its own x and y values
+
+	cout<<p2.x<<" "<<p2.y<<endl; //p2 has its own x and y values
+
+
+	return 0;
+
+}
