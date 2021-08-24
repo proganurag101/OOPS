@@ -13,6 +13,14 @@ Types of constructors:-
 3.Copy constructors :- Called when one object is assigned(copied) to another.
 
 
+Destructors:
+1.This is a special member function(functions which has same name as class) with tilde(~) before the name.
+2.Used to destruct the memory of object which was constructed by constructor.
+3.Destructors get called automatically(implicit call),as constructor was.
+4.We can call destructors explicitly but that is not a good practice.
+
+
+
 
 #include<iostream>
 using namespace std;
@@ -58,6 +66,12 @@ public:
 
 		
 	}
+	
+	//Destructor
+	~Point(){
+		cout<<"Destructor called"<<endl;
+	}
+
 
 	//getters
 	double getX(){
