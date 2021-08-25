@@ -1,0 +1,32 @@
+||4 pillars of OOPS-  Encapsulation,Inheritance,Abstraction, and Polymorphism(static-compile time,dynamic-runtime)||
+important topics:- This pointer,Friend Function.
+
+1.||Encapsulation||
+
+(i)The OOPS concept which talks about binding data and the function that manipulates those data,
+(ii)Class is an example of encapsulation,if we have created some class and have data,member function then it is an example of encapsulation.
+
+#include<iostream>
+using namespace std;
+class Base{
+	int x;  //Data member  
+
+public:
+
+//Member Functions
+	void setX(int a){x=a;}         //if we don't make our data members private,so we don't use function to access them,and access them directly
+                                 
+	int getX(){return x;}
+};
+
+
+
+
+int main(){
+Base b1;
+b1.setX(10);                    //i.e x(public)- cout<<b.x<<endl;  (but keeping data members public is not encapsulation).
+
+cout<<b1.getX()<<endl;
+
+return 0;
+}
