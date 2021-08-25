@@ -34,9 +34,13 @@ Types of constructors:-
 3.Destructors get called automatically(implicit call),as constructor was.
 4.We can call destructors explicitly but that is not a good practice.
 
+||important topics:- This pointer,Friend Function.||
 
-||4 pillars of OOPS-  Encapsulation,Inheritance,Abstraction, and Polymorphism.||
-important topics:- This pointer,Friend Function.
+
+
+
+||4 pillars of OOPS-  Encapsulation,Abstraction,Inheritance, and Polymorphism.||
+
 
 1.||Encapsulation||
 
@@ -45,5 +49,5 @@ important topics:- This pointer,Friend Function.
 
 2.||Abstraction||
 (i)Show only relevant information to 
-(ii)
+(ii)Data abstraction and data hiding are two different things.
 
