@@ -2,7 +2,7 @@
 (i)Show only relevant information to user.
 (ii)Data abstraction and data hiding are two different things.
 (iii)here,we don't want to show how something is implemented,ex- we have a class rectangle which contains multiple functions like set_values,area calculation,getWidth,getHeight,
-we don't the user to see how those functions have been implemented.
+we don't want the user to see how those functions have been implemented.
 (iv)This could very useful if we want to allow someone to use functions to perform operations but we don't want to show them the implementation.
 
 
