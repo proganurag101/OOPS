@@ -34,7 +34,10 @@ Types of constructors:-
 3.Destructors get called automatically(implicit call),as constructor was.
 4.We can call destructors explicitly but that is not a good practice.
 
-||important topics:- This pointer,Friend Function.||
+||important topiThcs:- This pointer,Friend Function.||
+
+This Pointer:-
+
 
 
 
@@ -50,4 +53,13 @@ Types of constructors:-
 2.||Abstraction||
 (i)Show only relevant information to 
 (ii)Data abstraction and data hiding are two different things.
+
+
+
+||This Pointer||
+
+1.This pointer is used to hold address of current object using which we have called the current member function,
+2.This pointer is const(as you cant change the address of the object through whicht the function has been called),
+3.This pointer is passed as hidden argument in non-static member functions,
+4.Compiler automatically changes all data member access with this pointer
 
