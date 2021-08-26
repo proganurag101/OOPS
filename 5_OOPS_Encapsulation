@@ -1,10 +1,15 @@
 ||4 pillars of OOPS-  Encapsulation,Inheritance,Abstraction, and Polymorphism(static-compile time,dynamic-runtime)||
 important topics:- This pointer,Friend Function.
 
+Data hiding: we keep data members private and this is considered as data hiding,encapsulation is a process in data hiding.
+
 1.||Encapsulation||
 
 (i)The OOPS concept which talks about binding data and the function that manipulates those data,
 (ii)Class is an example of encapsulation,if we have created some class and have data,member function then it is an example of encapsulation.
+
+
+
 
 #include<iostream>
 using namespace std;
