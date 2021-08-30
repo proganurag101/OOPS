@@ -1,0 +1,85 @@
+||Friend Function||
+
+1.Keyword "friend" is used to make some [function or class],as friend of you class,
+2.Friend function OR friend class can access private,protected,public Data member or member function,
+3.Function can not become friend of function,
+4.class can not become friend of function.
+5.Friendship is not mutual,if a class A is a friend of B,then B doesn't become friend of A,
+6.Friendship is not inherited.
+
+
+//Making a FUNCTION friend of a CLASS.
+
+#include<iostream>
+using namespace std;
+
+class Base{
+	int x;
+public:
+	Base();
+	Base(int a) : x{a}{} //or base(int a){x=a;}
+	friend void set(Base &,int);   //we can declare a foreign function friend from inside only.
+	friend int get(Base &);
+};
+void set(Base &obj,int a){
+	obj.x = a;
+}
+
+int get(Base &a){
+	return a.x;
+}	
+
+
+int main(){
+ Base obj1(10);
+ cout<<get(obj1)<<endl;
+ set(obj1,20);
+ cout<<get(obj1)<<endl;
+
+	return 0;
+
+}
+
+//MAKING a CLASS friend of a CLASS
+
+
+#include<iostream>
+using namespace std;
+
+class Base{
+	int x;
+public:
+	Base();
+	Base(int a) : x{a}{} //or base(int a){x=a;}
+	friend void set(Base &,int);   //we can declare a foreign function friend from inside only.
+	friend int get(Base &); //always a class tells which function or class is its friend.
+    friend class GetSet;
+};
+
+class GetSet{
+public:
+	void set(Base &obj,int a){
+		obj.x = a;
+	}
+	int get(Base &obj){
+		return obj.x;
+	}
+};
+
+
+
+
+int main(){
+ Base obj1(10);                        //declare object and initialise
+ GetSet gs;                           //declare gs object
+ cout<<gs.get(obj1)<<endl;           //class -> object -> function - returns value of x.
+ gs.set(obj1,20);                   //sets the value of the current object's data member to 20.
+ cout<<gs.get(obj1)<<endl;         //returns the value of current object. 
+ 
+	return 0;
+
+}
+
+
+
+
