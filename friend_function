@@ -83,3 +83,6 @@ int main(){
 
 
 
+NOTE:- 
+(i)We should not declare too many functions friend instead we should make a class and make it a friend,
+(ii)We should avoid using friend functions instead we should declare functions inside class only if we want them to access our data members.
