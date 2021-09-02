@@ -14,6 +14,8 @@
 
 1.Single inheritance:-
 
+(i) class A <- class B : inherit from class A to class B. 
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -46,7 +48,8 @@ obj.func();  //we called an object of B,which returned the function of A.
 return 0;
 }
 
-2.Multiple Inheritance
+2.Multiple Inheritance:-
+- class A and class B <- class C // inherit from A and B to C.
 
 #include<iostream>
 #include<string>
@@ -89,7 +92,7 @@ obj.funcPA(); //we can not call this protected member through object of class C 
 obj.funcC();  //here we've called a function of C through object of C,the function contains protected members of class A and B.
               //we can say we can call protected members of parent class from inside the class only.
 
-;return 0;
+return 0;
 }
 
 
