@@ -1,0 +1,97 @@
+||3.Inheritance||
+(i)It helps to inherit attributes and methods from one class to another,
+
+(ii)Derived class(child class)->the class that inherits from another class,
+    Base class(parent class)-> the class that is being inherited from,
+    
+(iii)Types of inheritance:-
+
+1.Single inheritance
+2.Multiple inheritance
+3.Multi-level inheritance
+4.Hybrid inheritance
+5.Hierarchial inheritance
+
+1.Single inheritance:-
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A{
+public: 
+	void func(){cout<<"Hello i am from class A"<<endl;};
+};
+
+
+class B:public A{   //inherit all public,protected members of A to public of B.
+public:
+
+};
+
+
+
+
+int main(){
+
+
+B obj;
+obj.func();  //we called an object of B,which returned the function of A.
+
+
+
+
+
+
+return 0;
+}
+
+2.Multiple Inheritance
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A{
+public: 
+	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
+protected:
+	void funcPA(){cout<<"Hello i a from protected of class B"<<endl;}
+};
+
+class B{   //inherit all public,protected members of A to public of B.
+public:
+	void funcB(){cout<<"Hello i am from public class B"<<endl;};
+protected:
+	void funcPB(){cout<<"Hello i a from protected of class B"<<endl;}
+
+};
+
+class C:public B,public A{  //inherit all public,protected members of A and B in  public of C.
+public:
+	void funcC(){
+		funcPA();
+		funcPB();
+	}
+};
+
+
+
+int main(){
+
+C obj;
+obj.funcA();  //we called from object of C,which returned the function of A.
+obj.funcB();   //we called from object of C,which returned the function of B.
+
+
+obj.funcPA(); //we can not call this protected member through object of class C outside class C.
+
+obj.funcC();  //here we've called a function of C through object of C,the function contains protected members of class A and B.
+              //we can say we can call protected members of parent class from inside the class only.
+
+;return 0;
+}
+
+
+
+  
