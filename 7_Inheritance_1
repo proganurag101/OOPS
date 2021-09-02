@@ -95,6 +95,49 @@ obj.funcC();  //here we've called a function of C through object of C,the functi
 return 0;
 }
 
+3. Multi-level inheritance :-
+(i) class A <- class B <- class C   :- class B inherited class A then class C inherited class B.
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A{
+public: 
+	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
+protected:
+	void funcPA(){cout<<"Hello i a from protected of class A"<<endl;}
+};
+
+class B : public A{   //inherit all public,protected members of A to public of B.
+public:
+	void funcB(){cout<<"Hello i am from public class B"<<endl;};
+protected:
+	void funcPB(){cout<<"Hello i a from protected of class B"<<endl;}
+
+};
+
+class C: public B{  //inherit all public,protected members of B(now B has all pub,pro members of A) in  public of C.
+public:
+	void funcC(){
+		funcPA();
+		funcPB();
+	}
+};
+
+
+
+int main(){
+	C obj;
+obj.funcA();
+obj.funcB();
+//obj.funcPB()  //this is invalid,as you can't access protected members of parent class through object of derived class from outside the class directly.
+obj.funcC();    //this is valid as we can call protected of A and B through object of C through member function of C.
+
+return 0;
+}
+
+
 
 
   
