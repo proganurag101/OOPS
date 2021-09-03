@@ -1,1 +1,178 @@
-4.Hybrid Inheritance :-
+4.||Hybrid Inheritance|| :-
+(i)Inheritance in which there is a mix of two or more inheritance, here(example) multi-level and multiple inheritance is seen.
+
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A{
+public: 
+	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
+protected:
+	void funcPA(){cout<<"Hello i a from protected of class A"<<endl;}
+};
+
+
+class B : public A{   //inherit all public,protected members of A to public of B.
+public:
+	void funcB(){cout<<"Hello i am from public class B"<<endl;};
+protected:
+	void funcPB(){cout<<"Hello i a from protected of class B"<<endl;}
+
+};
+
+
+class C{ 
+public:
+	void funcC(){
+		cout<<"Hello i am from public of class C"<<endl;
+	}
+protected:
+	void funcPC(){
+		cout<<"Hello i am from protected of class C"<<endl;
+	}
+	
+};
+
+class D:public B,public C{
+public:
+	void funcD(){
+		funcPA();
+		funcPB();
+		funcPC();
+	}
+};
+
+
+
+int main(){
+	D obj;
+	obj.funcA(); //inherited from public of A to B then B to D
+	obj.funcB();  //inherited from public of B to D
+	obj.funcC(); //inherited from public of C to D
+	obj.funcD(); //all protected members camed to D through hybrid inheritance
+
+
+return 0;
+}
+
+
+5.||Hierarchial inheritance||:-
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+
+// LEVEL-1
+
+class A{
+public: 
+	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
+protected:
+	void funcPA(){cout<<"Hello i a from protected of class A"<<endl;}
+};
+
+// LEVEL-2
+
+class B : public A{   //inherit all public,protected members of A to public of B.
+public:
+	void funcB(){cout<<"Hello i am from public of class B"<<endl;};
+protected:
+	void funcPB(){cout<<"Hello i a from protected of class B"<<endl;}
+
+};
+
+
+
+class C : public A{ 
+public:
+	void funcC(){
+		cout<<"Hello i am from public of class C"<<endl;
+	}
+protected:
+	void funcPC(){
+		cout<<"Hello i am from protected of class C"<<endl;
+	}
+	
+};
+
+
+//LEVEL-3(a)
+
+
+class D:public B{
+public:
+	void funcD(){
+		cout<<"Hello i am from public of class D"<<endl;
+	}
+	
+};
+
+class E:public B{
+public:
+	void funcE(){
+		funcPA();
+		funcPB();
+	}
+
+};
+
+//LEVEL-3(b)
+
+
+class F:public C{
+public:
+	void funcD(){
+		cout<<"Hello i am from public of class F"<<endl;
+	}
+};
+
+class G:public C{
+public:
+	void funcG(){
+		funcPA();
+		funcPC();
+	}
+	
+
+
+	
+};
+
+
+
+
+
+int main(){
+	E obj1;
+	obj1.funcA();
+	obj1.funcB();
+	obj1.funcE();
+
+	//E and D have all public and protected members of A and B.
+
+	G obj2;
+
+	obj2.funcA();
+	obj2.funcC();
+	obj2.funcG();
+
+	//G and F have all public and protected members of A and C.
+
+
+	//But both them carry all public and protected members of A as hierarchy hence known as hierarchial inheritance.
+
+return 0;
+}
+
+
+
+
+
+
