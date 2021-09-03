@@ -59,7 +59,7 @@ class A{
 public: 
 	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
 protected:
-	void funcPA(){cout<<"Hello i a from protected of class B"<<endl;}
+	void funcPA(){cout<<"Hello i a from protected of class A"<<endl;}
 };
 
 class B{   //inherit all public,protected members of A to public of B.
@@ -90,7 +90,7 @@ obj.funcB();   //we called from object of C,which returned the function of B.
 obj.funcPA(); //we can not call this protected member through object of class C outside class C.
 
 obj.funcC();  //here we've called a function of C through object of C,the function contains protected members of class A and B.
-              //we can say we can call protected members of parent class from inside the class only.
+              //we can say we can call protected members of parent class from inside the derived class only.
 
 return 0;
 }
