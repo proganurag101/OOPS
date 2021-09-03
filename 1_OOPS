@@ -59,14 +59,14 @@ This Pointer:-
 ||This Pointer||
 
 1.This pointer is used to hold address of current object using which we have called the current member function,
-2.This pointer is const(as you cant change the address of the object through whicht the function has been called),
+2.This pointer is const(as you can't change the address of the object through which the function has been called),
 3.This pointer is passed as hidden argument in non-static member functions,
 4.Compiler automatically changes all data member access with this pointer.
 
 ||Friend Function||
 1.It is used to make some function or class as friend of a class,
-2.Friend function OR friend class can access private/public/protected data member OR member functions of another class.
-3.Class can not become friend of function.
+2.Friend function OR friend class can access private/public/protected data member OR member functions of another class,
+3.Class can not become friend of function,
 4.Friendship is not mutual. if class A is friend of B,then B doesn't become friend of A automatically,
 5.Friendship is not inherited.
 
