@@ -8,3 +8,53 @@
 NOTE:-(i) we genrally don't redefine any function of base class and it is done for overriding only.
       (ii)return type does not matter in F.Overloading but in F.overriding it does.
 
+
+
+
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+//refer to cpp nuts(youtube) object overloading vs object over riding very good explanation!
+//virtual keyword is used because without it our object calls the earlier(declared in base class) function and not the desired one,
+//override keyword(optional) is used to make sure we are passing correct parameters,return type if we dont it correctly tells the error after compilation
+
+class Person{
+	public:
+	virtual void printName(){cout<<"Person"<<endl;}
+};
+
+class Man:public Person{
+public:
+	void printName() override {cout<<"Rupesh"<<endl;}   //re-defined for men
+};
+
+class Woman :public Person{
+public:
+	void printName(){cout<<"Sandhya"<<endl;}  //re-defined for women
+};
+
+
+
+int main(){
+	Man m;
+
+	Person *p  = &m;  //pointer to person class is declared and passed the address of Man class
+	p->printName();   //instead of this:- (*p).printName();	
+	//if we dont use virtual in base class(person),person gets printed.
+	//as printname is early binded(static polymorphism,function overloading)
+	//so printname() does not check what p is pointing or holding inside.
+	//so we use virtual keyword and run-time polymorphism occurs and call is decided during run time so R.T.Poly.
+
+	m.printName(); //see here its calling the correct function and printing rupesh.
+
+
+
+
+
+
+return 0;
+}
