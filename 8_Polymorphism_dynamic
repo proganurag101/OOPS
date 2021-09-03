@@ -1,0 +1,10 @@
+8-(ii)||Run-time Polymorphism||
+-Function overriding through virtual function.
+//Function  overriding is needed when we perform inheritance and there is a function
+//in base class which is inherited into derived,but we want to provide our own definition
+//for that function in derived class,in short we dont want to take that particular function
+//from base class so in that case we can write new definition for that function in our derived class
+//with same name as in base class we just write virtual before return type in base class
+NOTE:-(i) we genrally don't redefine any function of base class and it is done for overriding only.
+      (ii)return type does not matter in F.Overloading but in F.overriding it does.
+
