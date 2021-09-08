@@ -55,7 +55,7 @@ int main(){
 	obj.funcA(); //inherited from public of A to B then B to D
 	obj.funcB();  //inherited from public of B to D
 	obj.funcC(); //inherited from public of C to D
-	obj.funcD(); //all protected members camed to D through hybrid inheritance
+	obj.funcD(); //all protected members came to D through hybrid inheritance
 
 
 return 0;
