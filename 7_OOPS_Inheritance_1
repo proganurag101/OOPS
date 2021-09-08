@@ -57,7 +57,7 @@ using namespace std;
 
 class A{
 public: 
-	void funcA(){cout<<"Hello i am from public of class A"<<endl;};
+	void funcA(){cout<<"Hello i am from public of class A"<<endl;}
 protected:
 	void funcPA(){cout<<"Hello i a from protected of class A"<<endl;}
 };
