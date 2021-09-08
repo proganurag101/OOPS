@@ -22,7 +22,7 @@ using namespace std;
 
 class A{
 public: 
-	void func(){cout<<"Hello i am from class A"<<endl;};
+	void func(){cout<<"Hello i am from class A"<<endl;}
 };
 
 
